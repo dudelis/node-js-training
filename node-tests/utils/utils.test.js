@@ -1,11 +1,12 @@
+const expect = require('expect');
+
 const utils = require('./utils');
+
 
 it('Should add 2 numbers', ()=>{
     var result = utils.add(33, 11);
     
-    if (result !== 44){
-        throw new Error(`Expected 44, but get ${result}`);
-    }
+    expect(result).toBe(44).toBeA('number');
 });
 
 it ('should square a number', ()=>{
